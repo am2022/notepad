@@ -26,6 +26,7 @@ class Ui_MainWindow
 {
 public:
     QAction *actionExit;
+    QAction *actionNew;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QTextEdit *textEdit;
@@ -42,6 +43,8 @@ public:
         MainWindow->resize(800, 600);
         actionExit = new QAction(MainWindow);
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
+        actionNew = new QAction(MainWindow);
+        actionNew->setObjectName(QString::fromUtf8("actionNew"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
@@ -69,6 +72,8 @@ public:
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuEdit->menuAction());
         menubar->addAction(menuView->menuAction());
+        menuFile->addAction(actionNew);
+        menuFile->addSeparator();
         menuFile->addAction(actionExit);
 
         retranslateUi(MainWindow);
@@ -80,6 +85,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         actionExit->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
+        actionNew->setText(QCoreApplication::translate("MainWindow", "New", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
