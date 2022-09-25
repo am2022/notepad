@@ -1,5 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QFile>
+#include <QTextStream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -22,4 +26,9 @@ void MainWindow::on_actionExit_triggered()
 void MainWindow::on_actionNew_triggered()
 {
     ui->textEdit->clear();
+}
+
+void MainWindow::on_actionOpen_triggered()
+{
+
 }
