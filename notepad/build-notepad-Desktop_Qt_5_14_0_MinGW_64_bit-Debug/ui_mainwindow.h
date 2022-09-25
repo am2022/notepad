@@ -27,6 +27,7 @@ class Ui_MainWindow
 public:
     QAction *actionExit;
     QAction *actionNew;
+    QAction *actionOpen;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QTextEdit *textEdit;
@@ -45,6 +46,8 @@ public:
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
         actionNew = new QAction(MainWindow);
         actionNew->setObjectName(QString::fromUtf8("actionNew"));
+        actionOpen = new QAction(MainWindow);
+        actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
@@ -73,6 +76,7 @@ public:
         menubar->addAction(menuEdit->menuAction());
         menubar->addAction(menuView->menuAction());
         menuFile->addAction(actionNew);
+        menuFile->addAction(actionOpen);
         menuFile->addSeparator();
         menuFile->addAction(actionExit);
 
@@ -92,6 +96,7 @@ public:
 #if QT_CONFIG(shortcut)
         actionNew->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+N", nullptr));
 #endif // QT_CONFIG(shortcut)
+        actionOpen->setText(QCoreApplication::translate("MainWindow", "Open", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
