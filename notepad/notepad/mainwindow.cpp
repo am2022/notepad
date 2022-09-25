@@ -27,6 +27,7 @@ void MainWindow::on_actionExit_triggered()
 void MainWindow::on_actionNew_triggered()
 {
     ui->textEdit->clear();
+    this->setWindowTitle("notepad");
 }
 
 void MainWindow::on_actionOpen_triggered()
