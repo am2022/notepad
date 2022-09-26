@@ -55,3 +55,21 @@ void MainWindow::on_actionOpen_triggered()
 
     file.close();
 }
+
+void MainWindow::on_actionSave_As_triggered()
+{
+    QString filename;
+    filename = QFileDialog::getSaveFileName(this, "Save");
+
+    QFile file(filename);
+
+    file.open(QIODevice::WriteOnly);
+
+    QTextStream write(&file);
+
+    QString text = ui->textEdit->toPlainText();
+
+    write<<text;
+
+    file.close();
+}
