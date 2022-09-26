@@ -28,6 +28,7 @@ public:
     QAction *actionExit;
     QAction *actionNew;
     QAction *actionOpen;
+    QAction *actionSave_As;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QTextEdit *textEdit;
@@ -48,6 +49,8 @@ public:
         actionNew->setObjectName(QString::fromUtf8("actionNew"));
         actionOpen = new QAction(MainWindow);
         actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
+        actionSave_As = new QAction(MainWindow);
+        actionSave_As->setObjectName(QString::fromUtf8("actionSave_As"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
@@ -77,6 +80,7 @@ public:
         menubar->addAction(menuView->menuAction());
         menuFile->addAction(actionNew);
         menuFile->addAction(actionOpen);
+        menuFile->addAction(actionSave_As);
         menuFile->addSeparator();
         menuFile->addAction(actionExit);
 
@@ -100,6 +104,7 @@ public:
 #if QT_CONFIG(shortcut)
         actionOpen->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+O", nullptr));
 #endif // QT_CONFIG(shortcut)
+        actionSave_As->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
