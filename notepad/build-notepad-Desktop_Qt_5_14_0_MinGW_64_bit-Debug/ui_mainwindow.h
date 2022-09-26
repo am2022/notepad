@@ -105,6 +105,9 @@ public:
         actionOpen->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+O", nullptr));
 #endif // QT_CONFIG(shortcut)
         actionSave_As->setText(QCoreApplication::translate("MainWindow", "Save As", nullptr));
+#if QT_CONFIG(shortcut)
+        actionSave_As->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+S", nullptr));
+#endif // QT_CONFIG(shortcut)
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
