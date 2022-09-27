@@ -73,3 +73,8 @@ void MainWindow::on_actionSave_As_triggered()
 
     file.close();
 }
+
+void MainWindow::on_actionZoom_In_triggered()
+{
+    ui->textEdit->zoomIn();
+}

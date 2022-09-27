@@ -24,6 +24,8 @@ private slots:
 
     void on_actionSave_As_triggered();
 
+    void on_actionZoom_In_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
