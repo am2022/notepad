@@ -29,6 +29,7 @@ public:
     QAction *actionNew;
     QAction *actionOpen;
     QAction *actionSave_As;
+    QAction *actionZoom_In;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QTextEdit *textEdit;
@@ -51,6 +52,8 @@ public:
         actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
         actionSave_As = new QAction(MainWindow);
         actionSave_As->setObjectName(QString::fromUtf8("actionSave_As"));
+        actionZoom_In = new QAction(MainWindow);
+        actionZoom_In->setObjectName(QString::fromUtf8("actionZoom_In"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
@@ -83,6 +86,7 @@ public:
         menuFile->addAction(actionSave_As);
         menuFile->addSeparator();
         menuFile->addAction(actionExit);
+        menuView->addAction(actionZoom_In);
 
         retranslateUi(MainWindow);
 
@@ -108,6 +112,7 @@ public:
 #if QT_CONFIG(shortcut)
         actionSave_As->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+S", nullptr));
 #endif // QT_CONFIG(shortcut)
+        actionZoom_In->setText(QCoreApplication::translate("MainWindow", "Zoom In", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
