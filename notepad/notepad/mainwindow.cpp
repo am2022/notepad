@@ -78,3 +78,8 @@ void MainWindow::on_actionZoom_In_triggered()
 {
     ui->textEdit->zoomIn();
 }
+
+void MainWindow::on_actionZoom_Out_triggered()
+{
+    ui->textEdit->zoomOut();
+}
