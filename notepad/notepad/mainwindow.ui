@@ -52,6 +52,7 @@
     <addaction name="actionZoom_Out"/>
     <addaction name="separator"/>
     <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -109,6 +110,11 @@
   <action name="actionUndo">
    <property name="text">
     <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
    </property>
   </action>
  </widget>
