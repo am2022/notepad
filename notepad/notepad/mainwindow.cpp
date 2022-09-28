@@ -83,3 +83,8 @@ void MainWindow::on_actionZoom_Out_triggered()
 {
     ui->textEdit->zoomOut();
 }
+
+void MainWindow::on_actionUndo_triggered()
+{
+    ui->textEdit->undo();
+}
