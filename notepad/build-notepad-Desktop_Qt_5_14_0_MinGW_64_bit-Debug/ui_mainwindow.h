@@ -32,6 +32,7 @@ public:
     QAction *actionZoom_In;
     QAction *actionZoom_Out;
     QAction *actionUndo;
+    QAction *actionRedo;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QTextEdit *textEdit;
@@ -60,6 +61,8 @@ public:
         actionZoom_Out->setObjectName(QString::fromUtf8("actionZoom_Out"));
         actionUndo = new QAction(MainWindow);
         actionUndo->setObjectName(QString::fromUtf8("actionUndo"));
+        actionRedo = new QAction(MainWindow);
+        actionRedo->setObjectName(QString::fromUtf8("actionRedo"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
@@ -96,6 +99,7 @@ public:
         menuView->addAction(actionZoom_Out);
         menuView->addSeparator();
         menuView->addAction(actionUndo);
+        menuView->addAction(actionRedo);
 
         retranslateUi(MainWindow);
 
@@ -130,6 +134,7 @@ public:
         actionZoom_Out->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+-", nullptr));
 #endif // QT_CONFIG(shortcut)
         actionUndo->setText(QCoreApplication::translate("MainWindow", "Undo", nullptr));
+        actionRedo->setText(QCoreApplication::translate("MainWindow", "Redo", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
