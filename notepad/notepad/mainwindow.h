@@ -32,6 +32,8 @@ private slots:
 
     void on_actionRedo_triggered();
 
+    void on_actionCut_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

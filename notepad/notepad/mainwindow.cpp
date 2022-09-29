@@ -93,3 +93,8 @@ void MainWindow::on_actionRedo_triggered()
 {
     ui->textEdit->redo();
 }
+
+void MainWindow::on_actionCut_triggered()
+{
+    ui->textEdit->cut();
+}
