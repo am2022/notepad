@@ -98,3 +98,8 @@ void MainWindow::on_actionCut_triggered()
 {
     ui->textEdit->cut();
 }
+
+void MainWindow::on_actionCopy_triggered()
+{
+    ui->textEdit->copy();
+}
