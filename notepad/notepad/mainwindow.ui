@@ -43,6 +43,7 @@
     <property name="title">
      <string>Edit</string>
     </property>
+    <addaction name="actionCut"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
@@ -121,6 +122,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="text">
+    <string>Cut</string>
    </property>
   </action>
  </widget>
