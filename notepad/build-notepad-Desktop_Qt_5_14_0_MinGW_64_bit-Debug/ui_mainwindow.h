@@ -150,7 +150,13 @@ public:
         actionRedo->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Y", nullptr));
 #endif // QT_CONFIG(shortcut)
         actionCut->setText(QCoreApplication::translate("MainWindow", "Cut", nullptr));
+#if QT_CONFIG(shortcut)
+        actionCut->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+X", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionCopy->setText(QCoreApplication::translate("MainWindow", "Copy", nullptr));
+#if QT_CONFIG(shortcut)
+        actionCopy->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+C", nullptr));
+#endif // QT_CONFIG(shortcut)
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
