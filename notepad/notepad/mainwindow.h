@@ -38,6 +38,8 @@ private slots:
 
     void on_actionPaste_triggered();
 
+    void on_actionSelect_All_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

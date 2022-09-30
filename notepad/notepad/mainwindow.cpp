@@ -108,3 +108,8 @@ void MainWindow::on_actionPaste_triggered()
 {
     ui->textEdit->paste();
 }
+
+void MainWindow::on_actionSelect_All_triggered()
+{
+    ui->textEdit->selectAll();
+}
