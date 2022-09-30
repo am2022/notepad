@@ -148,6 +148,9 @@
    <property name="text">
     <string>Paste</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
   </action>
   <action name="actionSelect_All">
    <property name="text">
