@@ -167,7 +167,13 @@ public:
         actionCopy->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+C", nullptr));
 #endif // QT_CONFIG(shortcut)
         actionPaste->setText(QCoreApplication::translate("MainWindow", "Paste", nullptr));
+#if QT_CONFIG(shortcut)
+        actionPaste->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+V", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionSelect_All->setText(QCoreApplication::translate("MainWindow", "Select All", nullptr));
+#if QT_CONFIG(shortcut)
+        actionSelect_All->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+A", nullptr));
+#endif // QT_CONFIG(shortcut)
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
