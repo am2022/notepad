@@ -45,6 +45,7 @@
     </property>
     <addaction name="actionCut"/>
     <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
@@ -139,6 +140,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
    </property>
   </action>
  </widget>
