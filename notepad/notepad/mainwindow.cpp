@@ -5,6 +5,8 @@
 #include <QFile>
 #include <QTextStream>
 
+QString filename_global;
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -44,6 +46,8 @@ void MainWindow::on_actionOpen_triggered()
         file.close();
         return;
     }
+
+    filename_global = filename;
 
     this->setWindowTitle(filename);
 
@@ -112,4 +116,19 @@ void MainWindow::on_actionPaste_triggered()
 void MainWindow::on_actionSelect_All_triggered()
 {
     ui->textEdit->selectAll();
+}
+
+void MainWindow::on_actionSave_triggered()
+{
+    QFile file(filename_global);
+
+    file.open(QIODevice::WriteOnly);
+
+    QTextStream write(&file);
+
+    QString text = ui->textEdit->toPlainText();
+
+    write<<text;
+
+    file.close();
 }
