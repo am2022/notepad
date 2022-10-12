@@ -121,6 +121,15 @@ void MainWindow::on_actionSelect_All_triggered()
 
 void MainWindow::on_actionSave_triggered()
 {
+    QMessageBox msg;
+
+    if(filename_global == "" || filename_global == " ")
+    {
+        msg.setText("the file name is empty!");
+        msg.exec();
+        return;
+    }
+
     QFile file(filename_global);
 
     file.open(QIODevice::WriteOnly);
