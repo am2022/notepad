@@ -30,6 +30,7 @@ void MainWindow::on_actionNew_triggered()
 {
     ui->textEdit->clear();
     this->setWindowTitle("notepad");
+    filename_global = "";
 }
 
 void MainWindow::on_actionOpen_triggered()
