@@ -35,7 +35,7 @@ void MainWindow::on_actionNew_triggered()
 void MainWindow::on_actionOpen_triggered()
 {
     QMessageBox msg;
-    QString filename = QFileDialog::getOpenFileName(this, "Add File", "/home", tr("Text Files (*.txt)"));
+    QString filename = QFileDialog::getOpenFileName(this, "Add File", "/home", tr("Text Files (*.txt);;All Files(*.*)"));
 
     QFile file(filename);
 
