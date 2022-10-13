@@ -175,6 +175,9 @@
    <property name="text">
     <string>ToHtml</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+H</string>
+   </property>
   </action>
  </widget>
  <resources/>
