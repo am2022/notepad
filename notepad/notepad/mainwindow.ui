@@ -59,6 +59,8 @@
     <addaction name="separator"/>
     <addaction name="actionUndo"/>
     <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionToHtml"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -167,6 +169,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionToHtml">
+   <property name="text">
+    <string>ToHtml</string>
    </property>
   </action>
  </widget>
