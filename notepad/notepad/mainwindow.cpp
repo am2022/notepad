@@ -142,3 +142,12 @@ void MainWindow::on_actionSave_triggered()
 
     file.close();
 }
+
+void MainWindow::on_actionToHtml_triggered()
+{
+    QString html;
+
+    html = ui->textEdit->toPlainText();
+
+    ui->textEdit->setHtml(html);
+}
