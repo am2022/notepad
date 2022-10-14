@@ -151,3 +151,12 @@ void MainWindow::on_actionToHtml_triggered()
 
     ui->textEdit->setHtml(html);
 }
+
+void MainWindow::on_actionToMd_triggered()
+{
+    QString md;
+
+    md = ui->textEdit->toPlainText();
+
+    ui->textEdit->setMarkdown(md);
+}
