@@ -184,6 +184,9 @@
    <property name="text">
     <string>ToMd</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+M</string>
+   </property>
   </action>
  </widget>
  <resources/>
