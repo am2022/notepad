@@ -61,6 +61,7 @@
     <addaction name="actionRedo"/>
     <addaction name="separator"/>
     <addaction name="actionToHtml"/>
+    <addaction name="actionToMd"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -177,6 +178,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+H</string>
+   </property>
+  </action>
+  <action name="actionToMd">
+   <property name="text">
+    <string>ToMd</string>
    </property>
   </action>
  </widget>
