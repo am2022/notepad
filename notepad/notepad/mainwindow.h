@@ -46,6 +46,8 @@ private slots:
 
     void on_actionToMd_triggered();
 
+    void on_actionNew_Window_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

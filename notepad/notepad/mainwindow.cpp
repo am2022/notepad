@@ -160,3 +160,10 @@ void MainWindow::on_actionToMd_triggered()
 
     ui->textEdit->setMarkdown(md);
 }
+
+void MainWindow::on_actionNew_Window_triggered()
+{
+    MainWindow *new_window = new MainWindow;
+
+    new_window->show();
+}
