@@ -193,6 +193,9 @@
    <property name="text">
     <string>New Window</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+N</string>
+   </property>
   </action>
  </widget>
  <resources/>
