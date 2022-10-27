@@ -212,6 +212,9 @@ public:
         actionNew_Window->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+N", nullptr));
 #endif // QT_CONFIG(shortcut)
         actionExit_All->setText(QCoreApplication::translate("MainWindow", "Exit All", nullptr));
+#if QT_CONFIG(shortcut)
+        actionExit_All->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+Q", nullptr));
+#endif // QT_CONFIG(shortcut)
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
