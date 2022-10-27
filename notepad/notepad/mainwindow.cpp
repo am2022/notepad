@@ -23,8 +23,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionExit_triggered()
 {
-    //exit(0);
-    this->~MainWindow();
+    this->close();
 }
 
 void MainWindow::on_actionNew_triggered()
