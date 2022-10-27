@@ -40,6 +40,7 @@
     <addaction name="actionSave_As"/>
     <addaction name="separator"/>
     <addaction name="actionExit"/>
+    <addaction name="actionExit_All"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -195,6 +196,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+N</string>
+   </property>
+  </action>
+  <action name="actionExit_All">
+   <property name="text">
+    <string>Exit All</string>
    </property>
   </action>
  </widget>
