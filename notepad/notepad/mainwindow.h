@@ -48,6 +48,8 @@ private slots:
 
     void on_actionNew_Window_triggered();
 
+    void on_actionExit_All_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

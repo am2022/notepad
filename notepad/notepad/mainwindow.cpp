@@ -168,3 +168,8 @@ void MainWindow::on_actionNew_Window_triggered()
 
     new_window->show();
 }
+
+void MainWindow::on_actionExit_All_triggered()
+{
+    exit(0);
+}
