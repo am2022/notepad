@@ -176,5 +176,6 @@ void MainWindow::on_actionExit_All_triggered()
 
 void MainWindow::on_actionFont_triggered()
 {
-
+    font_frm *font = new font_frm();
+    font->show();
 }
