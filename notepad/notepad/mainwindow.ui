@@ -69,6 +69,7 @@
     <property name="title">
      <string>Format</string>
     </property>
+    <addaction name="actionFont"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -210,6 +211,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+Q</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="text">
+    <string>Font</string>
    </property>
   </action>
  </widget>
