@@ -50,6 +50,8 @@ private slots:
 
     void on_actionExit_All_triggered();
 
+    void on_actionFont_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

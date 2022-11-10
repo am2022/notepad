@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
+#include "font_frm.h"
 
 QString filename_global;
 
@@ -171,4 +172,9 @@ void MainWindow::on_actionNew_Window_triggered()
 void MainWindow::on_actionExit_All_triggered()
 {
     exit(0);
+}
+
+void MainWindow::on_actionFont_triggered()
+{
+
 }
