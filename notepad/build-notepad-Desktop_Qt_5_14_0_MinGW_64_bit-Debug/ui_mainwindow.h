@@ -42,6 +42,7 @@ public:
     QAction *actionToMd;
     QAction *actionNew_Window;
     QAction *actionExit_All;
+    QAction *actionFont;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QTextEdit *textEdit;
@@ -49,6 +50,7 @@ public:
     QMenu *menuFile;
     QMenu *menuEdit;
     QMenu *menuView;
+    QMenu *menuFormat;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -90,6 +92,8 @@ public:
         actionNew_Window->setObjectName(QString::fromUtf8("actionNew_Window"));
         actionExit_All = new QAction(MainWindow);
         actionExit_All->setObjectName(QString::fromUtf8("actionExit_All"));
+        actionFont = new QAction(MainWindow);
+        actionFont->setObjectName(QString::fromUtf8("actionFont"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
@@ -109,6 +113,8 @@ public:
         menuEdit->setObjectName(QString::fromUtf8("menuEdit"));
         menuView = new QMenu(menubar);
         menuView->setObjectName(QString::fromUtf8("menuView"));
+        menuFormat = new QMenu(menubar);
+        menuFormat->setObjectName(QString::fromUtf8("menuFormat"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -116,6 +122,7 @@ public:
 
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuEdit->menuAction());
+        menubar->addAction(menuFormat->menuAction());
         menubar->addAction(menuView->menuAction());
         menuFile->addAction(actionNew);
         menuFile->addAction(actionNew_Window);
@@ -138,6 +145,7 @@ public:
         menuView->addSeparator();
         menuView->addAction(actionToHtml);
         menuView->addAction(actionToMd);
+        menuFormat->addAction(actionFont);
 
         retranslateUi(MainWindow);
 
@@ -215,9 +223,11 @@ public:
 #if QT_CONFIG(shortcut)
         actionExit_All->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+Q", nullptr));
 #endif // QT_CONFIG(shortcut)
+        actionFont->setText(QCoreApplication::translate("MainWindow", "Font", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
+        menuFormat->setTitle(QCoreApplication::translate("MainWindow", "Format", nullptr));
     } // retranslateUi
 
 };
