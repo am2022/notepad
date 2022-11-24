@@ -28,3 +28,11 @@ void font_frm::on_pushButton_clicked()
 
     this->close();
 }
+
+int font_frm::show_font_num()
+{
+    int font_num;
+    font_num = global_font_num;
+
+    return font_num;
+}

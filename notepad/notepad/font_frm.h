@@ -14,6 +14,7 @@ class font_frm : public QWidget
 public:
     explicit font_frm(QWidget *parent = nullptr);
     ~font_frm();
+    int show_font_num();
 
 private slots:
     void on_pushButton_clicked();
