@@ -15,6 +15,9 @@ public:
     explicit font_frm(QWidget *parent = nullptr);
     ~font_frm();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::font_frm *ui;
 };

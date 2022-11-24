@@ -1,6 +1,8 @@
 #include "font_frm.h"
 #include "ui_font_frm.h"
 
+int global_font_num;
+
 font_frm::font_frm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::font_frm)
@@ -15,4 +17,14 @@ font_frm::font_frm(QWidget *parent) :
 font_frm::~font_frm()
 {
     delete ui;
+}
+
+void font_frm::on_pushButton_clicked()
+{
+    int font_num;
+    font_num = ui->spinBox->value();
+
+    global_font_num = font_num;
+
+    this->close();
 }
