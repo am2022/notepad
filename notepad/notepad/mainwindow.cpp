@@ -182,5 +182,11 @@ void MainWindow::on_actionFont_triggered()
 
 void MainWindow::on_actionUpdate_triggered()
 {
+    font_frm *f = new font_frm();
 
+    int v = f->show_font_num();
+
+    QFont font("Arial", v);
+
+    ui->textEdit->setFont(font);
 }
