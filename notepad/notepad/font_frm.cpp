@@ -1,5 +1,6 @@
 #include "font_frm.h"
 #include "ui_font_frm.h"
+#include <QMessageBox>
 
 int global_font_num;
 
@@ -25,6 +26,11 @@ void font_frm::on_pushButton_clicked()
     font_num = ui->spinBox->value();
 
     global_font_num = font_num;
+
+    QMessageBox msg;
+
+    msg.setText("after you click to enter button you should click to update button in menu.");
+    msg.exec();
 
     this->close();
 }
