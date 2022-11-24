@@ -70,6 +70,7 @@
      <string>Format</string>
     </property>
     <addaction name="actionFont"/>
+    <addaction name="actionUpdate"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -216,6 +217,11 @@
   <action name="actionFont">
    <property name="text">
     <string>Font</string>
+   </property>
+  </action>
+  <action name="actionUpdate">
+   <property name="text">
+    <string>Update</string>
    </property>
   </action>
  </widget>

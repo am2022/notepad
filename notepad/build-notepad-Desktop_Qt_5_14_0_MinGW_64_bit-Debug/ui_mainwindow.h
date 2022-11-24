@@ -43,6 +43,7 @@ public:
     QAction *actionNew_Window;
     QAction *actionExit_All;
     QAction *actionFont;
+    QAction *actionUpdate;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QTextEdit *textEdit;
@@ -94,6 +95,8 @@ public:
         actionExit_All->setObjectName(QString::fromUtf8("actionExit_All"));
         actionFont = new QAction(MainWindow);
         actionFont->setObjectName(QString::fromUtf8("actionFont"));
+        actionUpdate = new QAction(MainWindow);
+        actionUpdate->setObjectName(QString::fromUtf8("actionUpdate"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
@@ -146,6 +149,7 @@ public:
         menuView->addAction(actionToHtml);
         menuView->addAction(actionToMd);
         menuFormat->addAction(actionFont);
+        menuFormat->addAction(actionUpdate);
 
         retranslateUi(MainWindow);
 
@@ -224,6 +228,7 @@ public:
         actionExit_All->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+Q", nullptr));
 #endif // QT_CONFIG(shortcut)
         actionFont->setText(QCoreApplication::translate("MainWindow", "Font", nullptr));
+        actionUpdate->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
