@@ -218,6 +218,9 @@
    <property name="text">
     <string>Font</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
   </action>
   <action name="actionUpdate">
    <property name="text">
