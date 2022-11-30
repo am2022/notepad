@@ -232,6 +232,9 @@ public:
         actionFont->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+F", nullptr));
 #endif // QT_CONFIG(shortcut)
         actionUpdate->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
+#if QT_CONFIG(shortcut)
+        actionUpdate->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+U", nullptr));
+#endif // QT_CONFIG(shortcut)
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));

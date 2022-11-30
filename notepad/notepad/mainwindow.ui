@@ -226,6 +226,9 @@
    <property name="text">
     <string>Update</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
   </action>
  </widget>
  <resources/>
